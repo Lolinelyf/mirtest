@@ -18,7 +18,7 @@
               :class="$style.search"
             />
           </form>
-          <button :class="$style.modal" @click="emit('openMenu')"></button>
+          <slot></slot>
         </div>
         <div :class="$style.person">
           <a href="" :class="$style.notification"
@@ -111,15 +111,5 @@
     height: 32px;
     border-radius: 50%;
     overflow: hidden;
-  }
-
-  .modal {
-    width: 28px;
-    height: 28px;
-    background-color: initial;
-    background-image: url('/icons/menu.png');
-    @media (min-width: $tablet-size-land) {
-      display: none;
-    }
   }
 </style>

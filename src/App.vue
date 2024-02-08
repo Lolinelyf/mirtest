@@ -18,7 +18,9 @@
 </script>
 
 <template>
-  <HeaderViews @click="openMenu" />
+  <HeaderViews
+    ><button :class="$style.modal" @click="openMenu"></button
+  ></HeaderViews>
 
   <div :class="$style.grid">
     <NavigationViews :isActive="visibleMenu" />
@@ -84,6 +86,15 @@
     @media (min-width: $tablet-size-land) {
       flex: 0 0 calc(100% - (380px + 16px));
       width: calc(100% - (380px + 16px));
+    }
+  }
+  .modal {
+    width: 28px;
+    height: 28px;
+    background-color: initial;
+    background-image: url('/icons/menu.png');
+    @media (min-width: $tablet-size-land) {
+      display: none;
     }
   }
 </style>
