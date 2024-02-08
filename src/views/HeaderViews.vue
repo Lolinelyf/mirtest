@@ -1,6 +1,4 @@
-<script setup>
-  const emit = defineEmits(['openMenu']);
-</script>
+<script setup></script>
 
 <template>
   <header :class="$style.header">
